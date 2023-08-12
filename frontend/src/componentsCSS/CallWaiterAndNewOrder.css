@@ -1,0 +1,37 @@
+.component{
+    float: left;
+    width: 100px;
+    height: 50px;
+    top:110px;
+    left:22px;
+    position: fixed;
+    gap: 10px;
+}
+.callWaiter,.basked{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 5px; /* İstenilen boşluğu ayarlayabilirsiniz */
+    padding: 5px 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    background-color:#3C0B0B;
+    margin-top: 10px;
+    border-radius: 10%;
+    color:#fff
+}
+/* .icon{
+    width: 24px;
+    height: 24px;
+    margin: auto;
+    float: left;
+  } */
+.callWaiter:hover,.basked:hover{
+    left:1px;
+    margin-top: 10px;
+    transform: scale(1.1);
+    transition: 500ms;
+    width: 100px;
+}

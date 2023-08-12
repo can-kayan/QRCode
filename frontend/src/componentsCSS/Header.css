@@ -49,8 +49,9 @@
   }
   
   .menu a:hover {
+    transform: scale(1.1);
     opacity: 75%;
-    font-size: 20.7px;
+    /* font-size: 20.7px; */
     color: #ffd900;
     transition: 500ms;
   }
