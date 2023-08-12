@@ -1,10 +1,18 @@
 import './App.css';
-
+import ProductCard from './componentsJS/ProductCard';
 function App() {
  return(
-    <body>
-        <div className="container"></div>
-    </body>
+    <div className="container">
+      <ProductCard className="product-card" />
+      <ProductCard className="product-card" />
+      <ProductCard className="product-card" />
+      <ProductCard className="product-card" />
+      <ProductCard className="product-card" />
+      <ProductCard className="product-card" />
+      <ProductCard className="product-card" />
+      <ProductCard className="product-card" />
+    </div>
+    
  )
 }
 

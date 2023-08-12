@@ -38,12 +38,11 @@ footer {
 /* Social media and contact sections */
 .social-media,
 .contact {
-  margin-top: 0;
-  color: #ffffff;
-  width: 50%;
+  color: #ffd900;
   display: block;
   flex-direction: column;
   align-items: center; /* Başlıkları yatayda ortala */
+  opacity: 75%;
 }
 
 /* Başlık stilleri */
@@ -66,7 +65,9 @@ footer {
   color: white;
   line-height: 30px;
 }
-
+.social-media .icon:hover{
+  transform: scale(1.2);
+}
 /* Icon */
 .icon {
   width: 24px;
@@ -96,7 +97,6 @@ footer > .copyright {
   opacity: 0.75;
   box-shadow: initial;
   border-top: 1px solid #515151;
-  font-size: 13px;
   margin-top: 0;
   display: flex;
   justify-content: center;
