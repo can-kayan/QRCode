@@ -1,14 +1,112 @@
+.home-page{
+  display: block;
+  width: 100%;
+  height: auto;
+  padding-top: 175px;
 
-.container{
+  margin-left: auto;
+  margin-right: auto;
+/* background-color: black; */
+}
+.container-information{
+  width: 80%;
+  height: 750px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 250px;
+}
+.container-information>.boxInContainer{
+  width: 100%;
+  height: 250px;
+  display: flex;
+  margin-bottom: 50px;
+  /* background-color: wheat; */
+}
+.textInBox{
+  width: 65%;
+  height: 100%;
+  padding-left: 25px;
+  text-align: left;
+  color:#ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+}
+.textInBox p{
+  font-size: 20px;
+}
+.container-information>.boxInContainer>.imageInBox{
+  width: 20%;
+  height: 100%;
+  background-image: url('./images/2copyWhatsApp\ Görsel\ 2023-08-08\ saat\ 12.25.14.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-end-end-radius: 10%;
+  transform: skew(-2deg); 
+  transition: 350ms;
+  cursor: pointer;
+  box-shadow: 1px 1px 5px #ffffff;
+}
+.container-information>.boxInContainer>.imageInBox:hover{
+  transform: scale(1.07);
+  transition: 350ms;
+}
+.container-main{
+  width: 90%;
+  height: 100%;
+  overflow: hidden;
+  padding-bottom: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  /* display: contents; */
+  align-items: center;
+  justify-content: center;
+}
+.container-top{
+  width: 85%;
+  height: 25px;
+  margin-left: auto;
+  /* margin-right: auto; */
+  display: flex;
+  margin-bottom: 10px;
+}
+.icon{
+  transition: 350ms;
+}
+.icon:hover{
+  transform: scale(1.1);
+  transition: 350ms;
+}
+.information-text{
+  width: 170px;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 1px solid #ffd900;
+  font-size: 20px;
+  color:white
+}
+.information-text p{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.container-bottom{
+  width: 200%;
+  height: auto;
+}
+.boxInContainerOne,.boxInContainerTwo{
   display: flex;
   flex-wrap: wrap;
   justify-content: center; /* Kartları yatayda ortala */
-  gap: 20px; /* Kartlar arası boşluk */
-    
+  gap: 1%; /* Kartlar arası boşluk */
+ 
 }
 .product-card{
   width: calc(25% - 20px); /* Her satırda 4 kart olduğu için genişliği 25% */
-  padding: 20px;
+  /* padding: 20px; */
   background-color: white;
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);

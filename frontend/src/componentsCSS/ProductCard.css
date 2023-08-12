@@ -1,22 +1,35 @@
 .product-card{
     border: 1px solid #3C0B0B;
     background-color: #3C0B0B;
-    width: 313px;
-    height: 365px;   
-    border-radius: 5%;
+    width: 331px;
+    height: 350px;   
+    border-end-end-radius: 5%;
     box-shadow: 1px 1px 5px #ffffff;
     float: left;
+    transform: skew(-2deg); 
+    transition: 350ms;
+    margin:10px
+}
+.product-card:hover{
+    transform: scale(1.05);
+    transition: 350ms;
 }
 .product-image{
-    width: 125px;
-    height: 125px;
-    background-image: url('../images/map.png');
+    width: 50%;
+    height: 35%;
+    background-image: url('../images/4copyWhatsApp\ Görsel\ 2023-08-08\ saat\ 12.25.15.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     margin-left: auto ;
     margin-right: auto;
     margin-top: 10px;
     border-radius:5% ;
+    transition: 500ms;
+    cursor: pointer;
+}
+.product-image:hover{
+    transform: scale(1.1);
+    transition: 500ms;
 }
 .product-title{
     font-family:'Poppins', sans-serif!important;
@@ -40,7 +53,7 @@
     border:1px solid #039d00;
     width: 124px;
     height: 38px;
-    border-radius: 15%;
+    border-end-end-radius: 20%;
     align-items: center;
     margin-left: auto;
     margin-right: auto;
@@ -49,4 +62,9 @@
     line-height: 150%;
     font-size: 25px;
     cursor: pointer;
+    transition: 350ms;
+}
+.product-button:hover{
+    transform: scale(1.1);
+    transition: 350ms;
 }

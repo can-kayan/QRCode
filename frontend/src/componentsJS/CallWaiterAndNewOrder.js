@@ -37,10 +37,10 @@ function CallWaiterAndNewOrder() {
   return (
     <div className='component'>
       <button className='basked' onClick={callWaiter}>
-        <FontAwesomeIcon className="icon" color='#ffd900' icon={faBasketShopping} />sepet
+        <FontAwesomeIcon className="icon" color='#ffd900' icon={faBasketShopping} /><p>Sepet</p>
       </button>
       <button className='callWaiter' onClick={placeOrder}>
-        <FontAwesomeIcon className="icon" color='#ffd900' icon={faBell} />garson çağır
+        <FontAwesomeIcon className="icon" color='#ffd900' icon={faBell} /><p>Garson Çağır</p>
       </button>
     </div>
   );

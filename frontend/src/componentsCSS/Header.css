@@ -2,12 +2,14 @@
     background-color: #3C0B0B;
     color: white;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
     padding: 10px;
     height: 60px;
     width: 100%;
     position: fixed;
+    z-index: 1000; 
+    margin-bottom: 25px;
   }
   
   .logos {
@@ -46,6 +48,7 @@
     color: inherit;
     font-size: 20px;
     display: block;
+    transition: 500ms;
   }
   
   .menu a:hover {
