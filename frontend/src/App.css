@@ -27,6 +27,7 @@
   width: 65%;
   height: 100%;
   padding-left: 25px;
+  padding-right: 25px;
   text-align: left;
   color:#ffffff;
   display: flex;
@@ -45,13 +46,30 @@
   background-size: cover;
   border-end-end-radius: 10%;
   transform: skew(-2deg); 
-  transition: 350ms;
+  transition: 500ms;
   cursor: pointer;
   box-shadow: 1px 1px 5px #ffffff;
 }
+
 .container-information>.boxInContainer>.imageInBox:hover{
   transform: scale(1.07);
-  transition: 350ms;
+  transition: 500ms;
+}
+.two{
+  width: 20%;
+  height: 100%;
+  background-image: url('./images/2copyWhatsApp\ Görsel\ 2023-08-08\ saat\ 12.25.14.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-end-start-radius: 10%;
+  transform: skew(-2deg); 
+  transition: 500ms;
+  cursor: pointer;
+  box-shadow: 1px 1px 5px #ffffff;
+}
+.two:hover{
+  transform: scale(1.07);
+  transition: 500ms;
 }
 .container-main{
   width: 90%;

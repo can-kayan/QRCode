@@ -1,5 +1,6 @@
 import { FaBackspace, FaBackward, FaFastBackward, FaFirstdraft, FaLastfm, FaLastfmSquare, FaStepBackward } from 'react-icons/fa';
 import './App.css';
+import {Link} from 'react-scroll'
 import ProductCard from './componentsJS/ProductCard';
 function App() {
  return(
@@ -11,8 +12,8 @@ function App() {
          </div>
          <div className='boxInContainer'>
             
-            <div className='textInBox Two' ><p>             Sevdiklerinizle güzel bir sohbet eşliğinde kahvenizi yudumlamak, lezzetli tatlılarımızın tadına bakmak veya günün her saatinde taze sandviçlerimizi denemek için sizi bekliyoruz. Kahve tutkunlarından atıştırmalık sevenlere kadar herkes için bir şeyler bulabileceğiniz geniş menümüzle sizleri ağırlamaktan mutluluk duyacağız.</p></div>
-            <div className='imageInBox Two'></div>
+            <div className='textInBox ' ><p>             Sevdiklerinizle güzel bir sohbet eşliğinde kahvenizi yudumlamak, lezzetli tatlılarımızın tadına bakmak veya günün her saatinde taze sandviçlerimizi denemek için sizi bekliyoruz. Kahve tutkunlarından atıştırmalık sevenlere kadar herkes için bir şeyler bulabileceğiniz geniş menümüzle sizleri ağırlamaktan mutluluk duyacağız.</p></div>
+            <div className='two'></div>
          </div>
          <div className='boxInContainer'>
             <div className='imageInBox'></div>
@@ -23,11 +24,16 @@ function App() {
       </div>
       <div className='container-main'>
          <div className='container-top'>
-            <div className='last-button'><FaBackward className='icon' style={{float:'left', cursor:'pointer'}} color='#ffd900' /></div>
+            <div className='last-button'><FaBackward className='icon' style={{float:'left', cursor:'pointer'}} color='#ffd900' />
+              
+            </div>
             <div className='information-text'><p>Populate Product</p></div>
-            <div className='next-button'><FaBackward className='icon' style={{float:'right', cursor:'pointer' , transform:'rotate(180deg)'}} color='#ffd900' /></div>
+            <div className='next-button'><FaBackward className='icon' style={{float:'right', cursor:'pointer' , transform:'rotate(180deg)'}} color='#ffd900' />
+               <Link to="boxInContainerTwo" smooth={true} duration={500}></Link>
+            </div>
          </div>
          <div className='container-bottom'>
+            
             <div className="boxInContainerOne">
                <ProductCard className="product-card" />
                <ProductCard className="product-card" />
