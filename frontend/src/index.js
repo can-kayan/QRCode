@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import HomePage from './pagesJS/HomePage';
 import Header from './componentsJS/Header'
 import Footer from './componentsJS/Footer'
 import CallWaiterAndNewOrder from './componentsJS/CallWaiterAndNewOrder';
@@ -11,7 +11,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Header />
-    <App />
+    <HomePage />
     <CallWaiterAndNewOrder />
     <Footer />
   </React.StrictMode>

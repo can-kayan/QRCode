@@ -27,7 +27,7 @@
 .icon{
     width: 24px;
     height: 24px;
-    float: left;
+    float: right;
     padding-left: 3px;
   }
 .callWaiter:hover,.basked:hover{
