@@ -1,8 +1,14 @@
 import { FaBackspace, FaBackward, FaFastBackward, FaFirstdraft, FaLastfm, FaLastfmSquare, FaStepBackward } from 'react-icons/fa';
 import './App.css';
-import {Link} from 'react-scroll'
+import { animateScroll as scroll } from "react-scroll";
 import ProductCard from './componentsJS/ProductCard';
+import React, { useRef  } from "react";
 function App() {
+   const scrollContainerRef = useRef(null);
+
+  const scrollTo = (scrollOffset) => {
+    scrollContainerRef.current.scrollLeft += scrollOffset;
+  };
  return(
    <div className='home-page'>
       <div className='container-information'>
@@ -22,42 +28,46 @@ function App() {
          </div>
          
       </div>
-      <div className='container-main'>
-         <div className='container-top'>
-            <div className='last-button'><FaBackward className='icon' style={{float:'left', cursor:'pointer'}} color='#ffd900' />
-              
-            </div>
-            <div className='information-text'><p>Populate Product</p></div>
-            <div className='next-button'><FaBackward className='icon' style={{float:'right', cursor:'pointer' , transform:'rotate(180deg)'}} color='#ffd900' />
-               <Link to="boxInContainerTwo" smooth={true} duration={500}></Link>
-            </div>
-         </div>
-         <div className='container-bottom'>
+      <div className="container-main">
+        <div className="container-top">
+        <div className="scroll-button left" onClick={() => scrollTo(-1000)}>
+            <FaBackward className='icon' color='#ffd900' />
+          </div>
+          <div className='information-text'>
+            <p>Populate Product</p>
+          </div>
+          <div className="scroll-button.right" onClick={() => scrollTo(1000)}>
+            <FaBackward className='icon' style={{ transform: "rotate(180deg)" }} color='#ffd900' />
+          </div>
+        </div>
+        <div className="container-bottom" ref={scrollContainerRef}>
+          <div className="box-container">
             
-            <div className="boxInContainerOne">
-               <ProductCard className="product-card" />
-               <ProductCard className="product-card" />
-               <ProductCard className="product-card" />
-               <ProductCard className="product-card" />
-               <ProductCard className="product-card" />
-               <ProductCard className="product-card" />
-               <ProductCard className="product-card" />
-               <ProductCard className="product-card" />
-            </div>
-            <div className="boxInContainerTwo">
-            <ProductCard className="product-card" />
-            <ProductCard className="product-card" />
-            <ProductCard className="product-card" />
-            <ProductCard className="product-card" />
-            <ProductCard className="product-card" />
-            <ProductCard className="product-card" />
-            <ProductCard className="product-card" />
-            <ProductCard className="product-card" />
+                  <ProductCard className="product-card" />
+                  <ProductCard className="product-card" />
+                  <ProductCard className="product-card" />
+                  <ProductCard className="product-card" />
+                  <ProductCard className="product-card" />
+                  <ProductCard className="product-card" />
+                  <ProductCard className="product-card" />
+                  <ProductCard className="product-card" />
+                  </div>
+          <div className="box-container">
+          
+                  <ProductCard className="product-card" />
+                  <ProductCard className="product-card" />
+                  <ProductCard className="product-card" />
+                  <ProductCard className="product-card" />
+                  <ProductCard className="product-card" />
+                  <ProductCard className="product-card" />
+                  <ProductCard className="product-card" />
+                  <ProductCard className="product-card" />
             </div>
          </div>
       </div>
    </div>
  )
 }
+
 
 export default App;

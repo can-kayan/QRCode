@@ -73,7 +73,7 @@
 }
 .container-main{
   width: 90%;
-  height: 100%;
+  height: auto;
   overflow: hidden;
   padding-bottom: 25px;
   margin-left: auto;
@@ -86,7 +86,6 @@
   width: 85%;
   height: 25px;
   margin-left: auto;
-  /* margin-right: auto; */
   display: flex;
   margin-bottom: 10px;
 }
@@ -113,14 +112,30 @@
 }
 .container-bottom{
   width: 200%;
-  height: auto;
+  height: 100%;
+  /* display: flex; */
+  overflow-x: scroll;
 }
-.boxInContainerOne,.boxInContainerTwo{
+.scroll-button {
+  float: left;
+  cursor: pointer;
+}
+.scroll-button.right {
+  float: right;
+  transform: rotate(180deg);
+}
+.box-container{
+  height: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center; /* Kartları yatayda ortala */
   gap: 1%; /* Kartlar arası boşluk */
- 
+  flex: 0 0 100%;
+  white-space: normal;
+}
+.show-box {
+  transform: translateX(0);
+  transition:350ms;
 }
 .product-card{
   width: calc(25% - 20px); /* Her satırda 4 kart olduğu için genişliği 25% */
