@@ -1,20 +1,26 @@
+.page{
+    width: auto;
+    height: auto;
+    margin-right: auto;
+    display: block;
+}
 .component{
     float: left;
     width: 100px;
-    height: 50px;
-    top:110px;
-    left:22px;
+    height: 150px;
+    top:70px;
+    left:20px;
     position: fixed;
-    gap: 10px;
+    display: block;
 }
-.callWaiter,.basked{
+.callWaiter,.basked,.table-number{
+    left:1px;
     width: 40px;
     height: 40px;
     display: flex;
     align-items: center;
-    gap: 5px; /* İstenilen boşluğu ayarlayabilirsiniz */
+    gap: 5px; 
     padding: 5px 5px;
-    background: none;
     border: none;
     cursor: pointer;
     background-color:#3C0B0B;
@@ -23,20 +29,29 @@
     color:#fff;
     overflow: hidden;
     transition: 500ms;
+    text-decoration: none;
+    padding: 5px 5px;
+    padding-right: 10px;
 }
 .icon{
     width: 24px;
     height: 24px;
-    float: right;
     padding-left: 3px;
+    color:#ffd900
+
   }
-.callWaiter:hover,.basked:hover{
+.callWaiter:hover,.basked:hover,.table-number:hover{
     left:1px;
     margin-top: 10px;
     transform: scaleX(1.1);
-    transition: 500ms;
     width: 100px;
+    transition: 500ms;
 }
-p{
+.basked-link{
+    text-decoration: none;
+    color:#ffffff;
+    width: auto;
+}
+.basked p{
     font-size: 15px;
 }

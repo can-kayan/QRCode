@@ -50,8 +50,8 @@ io.on('connection', (socket) => {
     io.emit('adminNotification', message);
   });
 });
-
-app.listen(5000,()=>{
+const port = 5000 || 3000;
+app.listen(port,()=>{
     console.log('server is running http://localhost:5000');
 })
 // require('./Services/modelsReferance')

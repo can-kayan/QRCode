@@ -2,7 +2,6 @@ const jwt=require('jsonwebtoken')
 const errorMessages=require('../errorHandling/errorMessages')
 const {QRCode}=require('../helper/modelsReferance')
 const login= async (req,res)=>{
-    console.log('Girdi')
     const qrCode=await QRCode.findOne({tableNumber:req.params.tableNumber})
     console.log(qrCode)
     if(!qrCode)

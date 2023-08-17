@@ -2,10 +2,8 @@
     background-color: #3C0B0B;
     color: white;
     display: flex;
-    /* justify-content: space-between; */
-    align-items: center;
     padding: 10px;
-    height: 60px;
+    height: 50px;
     width: 100%;
     position: fixed;
     z-index: 1000; 
@@ -17,17 +15,20 @@
     font-weight: bold;
     color: #ffd900;
     border-right: 1px solid #fff;
-    width: auto;
-    height: 94%;
-    margin-left: 25px;
-    padding-right: 25px;
-    padding-top:15px;
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
   }
   .menu {
     width: auto;
     margin-left: auto;
     margin-right: auto;
-    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .menu ul {
     list-style: none;

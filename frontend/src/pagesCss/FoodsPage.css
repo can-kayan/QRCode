@@ -1,0 +1,77 @@
+.page{
+    display: block;
+    height: auto;
+}
+.food-page{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding-top: 100px;
+    margin-bottom: 100px;
+  }
+  .product-list{
+    width: 85%;
+    height: 90%;
+    padding-left: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .product-category{
+    position: fixed;
+    left: 20px;
+    top:235px;
+    width: 200px;
+    height: auto;
+    background-color: #3C0B0B;
+    border-left: 1px solid #292929;
+    margin-right: auto;
+    margin-right: 50px;
+    padding-right: 10px;
+    padding: 10px;
+    box-shadow: 1px 1px 5px #fff;
+    border-end-end-radius: 10%;
+  }
+  .category{
+    width: 100%;
+    height: auto;
+    border-radius: 1%;
+    cursor: pointer;
+  }
+  .category p{
+    color:#ffffff;
+    height: 40px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    opacity: 70%;
+    transition: 500ms;
+    
+  }
+  .category p:hover{
+    transform: scale(1.3);
+    padding-left: 50px;
+    color:#ffffff;
+    opacity: 100%;
+    transition: 500ms;
+  }
+.product-card{
+    border: 1px solid #3C0B0B;
+    background-color: #3C0B0B;
+    width: 331px;
+    height: 350px;   
+    border-end-end-radius: 5%;
+    box-shadow: 1px 1px 5px #fff;
+    float: left;
+    transform: skew(-2deg); 
+    transition: 350ms;
+    margin:10px;
+    bottom: 0;
+    display: block;
+}
+.product-card:hover{
+    transform: scale(1.05);
+    transition: 350ms;
+}

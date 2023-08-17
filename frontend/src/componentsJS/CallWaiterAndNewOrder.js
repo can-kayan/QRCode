@@ -1,47 +1,32 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBasketShopping, faBell } from '@fortawesome/free-solid-svg-icons';
-import io from 'socket.io-client';
+import {faBasketShopping, faBell, faTable } from '@fortawesome/free-solid-svg-icons';
 import '../componentsCSS/CallWaiterAndNewOrder.css'
-const socket = io('http://localhost:3001'); // Sunucu adresini buraya girin
+import { Link, Route, Routes } from 'react-router-dom';
+import BaskedPage from '../pagesJS/BaskedPage';
 
 function CallWaiterAndNewOrder() {
-  useEffect(() => {
-    socket.on('waiterCalled', (data) => {
-      alert(data.message);
-    });
-
-    socket.on('orderReceived', (data) => {
-      alert(data.message + ' Sipariş Detayları: ' + JSON.stringify(data.order));
-    });
-
-    // Unmount işlemi sırasında socket'i kapat
-    return () => {
-      socket.disconnect();
-    };
-  }, []);
-
-  const callWaiter = () => {
-    socket.emit('callWaiter');
-  };
-
-  const placeOrder = () => {
-    const order = {
-      tableNumber: 3,
-      items: ['Kahve', 'Kek']
-    };
-    socket.emit('newOrder', order);
-    console.log(order);
-  };
-
   return (
-    <div className='component'>
-      <button className='basked' onClick={callWaiter}>
-        <FontAwesomeIcon className="icon" color='#ffd900' icon={faBasketShopping} /><p>Sepet</p>
-      </button>
-      <button className='callWaiter' onClick={placeOrder}>
-        <FontAwesomeIcon className="icon" color='#ffd900' icon={faBell} /><p>Garson Çağır</p>
-      </button>
+    <div className='page'>
+      <div className='component'>
+        <Link to="/basked" className='basked-link'>
+        <button className='basked' >
+        
+          <FontAwesomeIcon className="icon"icon={faBasketShopping} /><p>Sepet</p>
+       
+        </button>
+        </Link>
+        <button className='callWaiter' >
+          <FontAwesomeIcon className="icon" icon={faBell} /><p>Garson Çağır</p>
+        </button>
+        <button className='table-number'>
+          <FontAwesomeIcon className='icon' icon={faTable}/><p>13</p>
+        </button>
+        
+      </div>
+      <Routes>
+        <Route path='/basked' exact Component={BaskedPage}/>        
+      </Routes>
     </div>
   );
 }

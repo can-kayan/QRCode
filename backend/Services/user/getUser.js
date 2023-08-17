@@ -28,7 +28,7 @@ const getAllUsers = async (req, res) => {
       return res.status(400).json({ success: false, message: errorMessages.FileNotFound});
     }
     await functionGetUser[req.params.schemaToSearch](req,res,filter)
-    return res.status(200).send(toList);
+    return res.json(toList);
   }
   else{return res.status(404).json({ success: false, message: errorMessages.AccessDenied });} 
   

@@ -1,19 +1,37 @@
 import '../componentsCSS//Header.css';
-
+import {BrowserRouter as Router, Route, Link, Routes} from 'react-router-dom'
+import HomePage from '../pagesJS/HomePage'
+import BaskedPage from '../pagesJS/BaskedPage';
+import CallWaiterAndNewOrder from './CallWaiterAndNewOrder';
+import Foodspage from '../pagesJS/FoodsPage';
+import DrinkPage from '../pagesJS/DrinkPage'
+import ContactUs from '../pagesJS/ContactUs'
+import Footer from './Footer';
 function Header() {
   return (
-      <header className="header">
-        <div className="logos">ttCafe</div>
-        <nav className="menu">
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Food</a></li>
-            <li><a href="#">Drink</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">About Us</a></li>
-          </ul>
-        </nav>
-      </header>
+    <div>
+        <div className="header">
+          <div className="logos">ttCafe</div>
+          <nav className="menu">
+            <ul>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/food">Food</Link></li> 
+               <li><Link to="/drink">Drink</Link></li>
+              <li><Link to="/contact-us">Contact Us</Link></li>
+              <li><Link to="/">About Us</Link></li>
+            </ul>
+          </nav>
+          
+          </div>
+          <CallWaiterAndNewOrder />
+          <Routes>
+            <Route path='/' exact Component={HomePage}/>     
+            <Route path='/food' exact Component={Foodspage}/>
+            <Route path='/drink' exact Component={DrinkPage}/>
+            <Route path='/contact-us' exact Component={ContactUs}/>
+          </Routes>
+          <Footer />  
+      </div>
   );
 }
 

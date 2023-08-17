@@ -2,18 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import HomePage from './pagesJS/HomePage';
-import Header from './componentsJS/Header'
-import Footer from './componentsJS/Footer'
-import CallWaiterAndNewOrder from './componentsJS/CallWaiterAndNewOrder';
 import reportWebVitals from './reportWebVitals';
+import {  BrowserRouter as Router } from 'react-router-dom';
+import Header from './componentsJS/Header';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Header />
-    <HomePage />
-    <CallWaiterAndNewOrder />
-    <Footer />
+    <Router>
+      <Header />     
+    </Router>
   </React.StrictMode>
 );
 
