@@ -1,17 +1,12 @@
 import '../pagesCss/ContactUs.css';
-import ProductCard from '../componentsJS/ProductCard';
 import React from "react";
-import Footer from '../componentsJS/Footer';
-import Header from '../componentsJS/Header'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBackward } from '@fortawesome/free-solid-svg-icons';
 import { FaInstagram, FaMailBulk, FaMap, FaTelegram, FaTwitter, FaWhatsapp } from 'react-icons/fa';
-function HomePage() {
+function ContactUs() {
  return(
   <div className='pages'>
    <div className='contact-us-page'>
-    <div className='contact-media top'>
-      <div className='media-panel-top'>
+    <div className='contact-media tops'>
+      <div className='media-panel'>
         <div className='media-box'>
           <FaTelegram className="icon" style={{ color: '#0078CC' }} />
           <p>FaTelegram</p>
@@ -26,6 +21,7 @@ function HomePage() {
         </div>
               
       </div>
+     </div>
     <div className='send-mail-panel'>
           <div className='panel'>
             <p >Şikayet ve Öneriler İçin İletişime Geçebilirsiniz...</p>
@@ -36,8 +32,8 @@ function HomePage() {
           </div>
       </div>  
       
-      <div className='contact-media bottom'>
-          <div className='media-panel-bottom'>
+      <div className='contact-media bottoms'>
+          <div className='media-panel'>
               <div className='media-box'>
               <FaWhatsapp className="icon" style={{ color: 'green' }} />
               <p>FaWhatsapp</p>
@@ -53,7 +49,7 @@ function HomePage() {
           </div>
       </div>
      
-   </div>
+  
   
    </div>
    
@@ -63,4 +59,4 @@ function HomePage() {
 }
 
 
-export default HomePage;
+export default ContactUs;

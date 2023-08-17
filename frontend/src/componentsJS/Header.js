@@ -6,6 +6,7 @@ import CallWaiterAndNewOrder from './CallWaiterAndNewOrder';
 import Foodspage from '../pagesJS/FoodsPage';
 import DrinkPage from '../pagesJS/DrinkPage'
 import ContactUs from '../pagesJS/ContactUs'
+import AboutUs from '../pagesJS/AboutUs'
 import Footer from './Footer';
 function Header() {
   return (
@@ -18,7 +19,7 @@ function Header() {
               <li><Link to="/food">Food</Link></li> 
                <li><Link to="/drink">Drink</Link></li>
               <li><Link to="/contact-us">Contact Us</Link></li>
-              <li><Link to="/">About Us</Link></li>
+              <li><Link to="/about-us">About Us</Link></li>
             </ul>
           </nav>
           
@@ -29,6 +30,7 @@ function Header() {
             <Route path='/food' exact Component={Foodspage}/>
             <Route path='/drink' exact Component={DrinkPage}/>
             <Route path='/contact-us' exact Component={ContactUs}/>
+            <Route path='/about-us' exact Component={AboutUs}/>
           </Routes>
           <Footer />  
       </div>

@@ -3,24 +3,23 @@
 }
 .contact-us-page{
   width: 100%;
-  display: flex;
-  justify-content: center;
-  height: auto;
-  /* min-height:850px ; */
+  display: block;
+  height: 950px;
   padding-top: 150px;
   margin-bottom: 100px;
   }
-.top,.bottom{
-  width: auto;
-  height: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
+.tops,.bottoms{
+  width: 75%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    color:#ffffff;
+    text-align: justify;
 }
 
-.media-panel-top,.media-panel-bottom{
-  width: auto;
+.media-panel{
+  width: 100%;
   height: 250px;
   display: flex;
   justify-content: center;
@@ -28,7 +27,7 @@
   margin-right: auto;
 }
 .media-box{
-  width: 300px;
+  width: 100%;
   height: 200px;
   background-color: #3C0B0B;
   border:1px solid #ffd900;
@@ -39,7 +38,6 @@
   transition: 500ms;
   color:#ffd900;
   cursor: pointer;
-  gap: 5px;
 }
 .media-box:hover{
   transform: scale(1.05);
@@ -48,7 +46,7 @@
   color:#ffffff;
   box-shadow: 0px 0px 5px #ffffff;
 }
-.top .icon{
+.tops .icon, .bottoms .icon{
   width: 48px;
   height: 48px;
   display: block;
@@ -56,7 +54,7 @@
   margin-right: auto;
   margin-top: 30px;
 }
-.top p{
+.tops p,.bottoms p{
   font-size: 25px;
   font-family: 'Times New Roman', Times, serif;
   width: 100%;
@@ -67,10 +65,13 @@
 }
 .send-mail-panel{
   width: 100%;
-  height: auto;
+  min-height: auto;
   margin-bottom: 80px;
   margin-left: auto;
   margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .panel{
   width: 70%;
@@ -87,7 +88,7 @@
   font-family: 'Times New Roman', Times, serif;
   text-align: center;
   transition: 500ms;
-  margin-bottom: 25px;
+  margin-bottom: 35px;
 }
 .panel p:hover{
   transform: scale(1.02);
@@ -109,7 +110,7 @@
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 15px;
+  margin-top: 35px;
   transition: 500ms;
   color: #656565;
 }

@@ -1,0 +1,59 @@
+.pages{
+    display: block;
+  }
+  .about-us-page{
+    width: 100%;
+    display: block;
+    height: 850px;
+    padding-top: 150px;
+    margin-bottom: 100px;
+    }
+
+  .top,.bottom{
+    width: 75%;
+    height: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    font-size: 20px;
+    color:#ffffff;
+    text-align: justify;
+    display: flex;
+    
+  }
+.description{
+    width: 60%;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 25px;
+
+}
+.top .description{
+    padding-right: 0;
+}
+.bottom .description{
+    padding-left: 0;
+}
+.image{
+    width: 39%;
+    height: auto;
+    background-image: url('../images/2copyWhatsApp\ Görsel\ 2023-08-08\ saat\ 12.25.14.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 25px;
+    border-end-end-radius: 10%;
+    border:1px solid #ffffff;
+    box-shadow: 1px 1px 5px #fff;
+    transition: 500ms;
+}
+.bottom .image{
+    border-end-end-radius: 0;
+    border-end-start-radius: 10%;
+    background-image: url('../images/1CopyWhatsApp\ Görsel\ 2023-08-08\ saat\ 12.25.14.jpg');
+}
+.image:hover{
+    transform: scale(1.05);
+    transition: 500ms;
+    border:1px solid #ffd900;
+    box-shadow: 1px 1px 5px #ffd900;
+}
