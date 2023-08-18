@@ -41,7 +41,7 @@ function ContactUs() {
               <div className='media-box'>
               <FaMailBulk className="icon" style={{ color: 'blue' }} />
               <p>FaMailBulk</p>
-              </div>
+              </div>250
               <div className='media-box'>
               <FaMap className="icon" style={{ color: 'greenyellow' }} />
               <p>FaMap</p>

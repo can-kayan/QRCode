@@ -47,9 +47,10 @@
     height:110px;
     color: #ffffff;
     opacity: 75%;
-    font-size: 13px;
+    font-size: 15px;
     margin-left: auto;
-    margin-right: auto;   
+    margin-right: auto;
+    text-align: center;   
 }
 .button{
     width: 124px;

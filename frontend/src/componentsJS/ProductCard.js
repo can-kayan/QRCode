@@ -4,11 +4,26 @@ import Axios from 'axios';
 
 function ProductCard() {
   const [productData, setProductData] = useState([]);
+  const [productType, setProductType] = useState([]);
   const [cart, setCart] = useState({});
 
+const getType=async()=>{
+  const path = window.location.pathname;
+  
+  const category = path.substring(1);
+  console.log(category)
+  let filter=await Axios.get(`http://localhost:5000/api/v2/user/ProductType?name=${category}`)
+  setProductType(filter.data)
+  
+}
+useEffect(() => {
+  getType();
+}, []);
   const getData = async () => {
     try {
-      const response = await Axios.get("http://localhost:5000/api/v2/user/Product");
+      let id=productType[0]._id
+      console.log(id)
+      const response = await Axios.get(`http://localhost:5000/api/v2/user/Product?productType=${id}`);
       setProductData(response.data);
     } catch (error) {
       console.log(error);
@@ -17,7 +32,7 @@ function ProductCard() {
 
   useEffect(() => {
     getData();
-  }, []);
+  },);
 
   const handleAddToCart = (product) => {
     setCart((prevCart) => {
@@ -29,7 +44,7 @@ function ProductCard() {
 
     });
   };
-  const handleCheckout = () => {
+  const handleCheckout= () => {
     // Sepeti sunucuya göndermek için bir API isteği gönderilebilir.
     // Örneğin:
     Axios.post("http://localhost:5000/api/v2/user/new=Orders", cart)
@@ -54,7 +69,7 @@ function ProductCard() {
           </div>
           <div className='button'>
             <button className='product-button added-basked' onClick={() => handleAddToCart(product)}>
-              <p>{product.price}$</p>
+              <p>{product.price}₺</p>
             </button>
           </div>
         </div>

@@ -18,7 +18,7 @@ function DrinkPage() {
             </div>
             <div className='product-list'>
                 <div className="box-container">
-                    <ProductCard className="product-card" />
+                    <ProductCard/>
                 </div>
             </div> 
         </div>
