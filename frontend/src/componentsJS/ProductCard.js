@@ -12,9 +12,15 @@ const getType=async()=>{
   
   const category = path.substring(1);
   console.log(category)
+  try{
   let filter=await Axios.get(`http://localhost:5000/api/v2/user/ProductType?name=${category}`)
-  setProductType(filter.data)
+    if(filter)
+      {setProductType(filter.data)}
+  }catch{
+    let newFilter=await Axios.get(`http://localhost:5000/api/v2/user/${category}`)
+    setProductType(newFilter.data)
   
+  }
 }
 useEffect(() => {
   getType();
@@ -27,12 +33,13 @@ useEffect(() => {
       setProductData(response.data);
     } catch (error) {
       console.log(error);
+      setProductData(productType)
     }
   };
 
   useEffect(() => {
     getData();
-  },);
+  });
 
   const handleAddToCart = (product) => {
     setCart((prevCart) => {

@@ -9,7 +9,7 @@ function CallWaiterAndNewOrder() {
   return (
     <div className='page'>
       <div className='component'>
-        <Link to="/basked" className='basked-link'>
+        <Link to="/Orders" className='basked-link'>
         <button className='basked' >
         
           <FontAwesomeIcon className="icon"icon={faBasketShopping} /><p>Sepet</p>
@@ -25,7 +25,7 @@ function CallWaiterAndNewOrder() {
         
       </div>
       <Routes>
-        <Route path='/basked' exact Component={BaskedPage}/>        
+        <Route path='/Orders' exact Component={BaskedPage}/>        
       </Routes>
     </div>
   );

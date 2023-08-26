@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import HomePage from './pagesJS/HomePage';
 import reportWebVitals from './reportWebVitals';
 import {  BrowserRouter as Router } from 'react-router-dom';
 import Header from './componentsJS/Header';

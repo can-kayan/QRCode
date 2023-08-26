@@ -1,6 +1,6 @@
 const mongoose=require('mongoose')
 const {functionPostUser,filterPostUser}=require('../../helper/middilewareReferance')
-const { postModelUser } = require('../../helper/controllerReferance')
+const {postUser } = require('../../helper/controllerReferance')
 const errorMessages=require('../../errorHandling/errorMessages')
 const { post } = require('../../repository/post')
 const postUsers=async(req,res)=>{
@@ -10,9 +10,9 @@ const postUsers=async(req,res)=>{
             filter[key] = req.query[key];
         });
         const domainNames=req.params.domainName
-        console.log(domainNames)
-        const domainInfo=await postModelUser[domainNames](req,res)
-        console.log(domainInfo)
+        console.log('geldi')
+        const domainInfo=await postUser[domainNames](req,res)
+        console.log('geldi')
         await filterPostUser[domainNames](req,res,filter)
         let useritem =await post(domainNames,domainInfo)
         console.log('geldi')

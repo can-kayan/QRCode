@@ -2,18 +2,10 @@ const mongoose = require('mongoose');
 const {functionGetUser,filterGetUser}=require('../../helper/middilewareReferance')
 const { getUser } = require('../../helper/controllerReferance')
 const errorMessages=require('../../errorHandling/errorMessages')
-const {User}=require('../../helper/modelsReferance')
 const filters=(value)=>{
   
   const authorizationGet=getUser.includes(value)
   return authorizationGet
-}
-const getUsers= async (req, res) => {
-    const userList = await User.findOne({_id:req.headers.decoded.id});
-    if (!userList) {
-      return res.status(500).json({ success: false, message:errorMessages.FileNotFound });
-    }
-    return res.send(userList);
 }
 const getAllUsers = async (req, res) => {
   if(filters(req.params.schemaToSearch)){
@@ -53,4 +45,4 @@ const getCountUsers = async (req, res) => {
 };
 
 
-module.exports = {  getAllUsers , getCountUsers ,getUsers};
+module.exports = {  getAllUsers , getCountUsers};

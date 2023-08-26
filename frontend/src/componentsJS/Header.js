@@ -1,7 +1,6 @@
 import '../componentsCSS//Header.css';
 import {BrowserRouter as Router, Route, Link, Routes} from 'react-router-dom'
 import HomePage from '../pagesJS/HomePage'
-import BaskedPage from '../pagesJS/BaskedPage';
 import CallWaiterAndNewOrder from './CallWaiterAndNewOrder';
 import Foodspage from '../pagesJS/FoodsPage';
 import DrinkPage from '../pagesJS/DrinkPage'

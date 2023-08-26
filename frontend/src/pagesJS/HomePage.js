@@ -1,8 +1,6 @@
 import '../pagesCss/HomePage.css';
 import ProductCard from '../componentsJS/ProductCard';
 import React from "react";
-import Footer from '../componentsJS/Footer';
-import Header from '../componentsJS/Header'
 function HomePage() {
  return(
    <div>

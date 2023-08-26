@@ -1,5 +1,5 @@
 const {functionPutUser,filterPutUser}=require('../../helper/middilewareReferance')
-const { putModelUser } = require('../../helper/controllerReferance')
+const { putUser } = require('../../helper/controllerReferance')
 const errorMessages=require('../../errorHandling/errorMessages')
 const { updateMany } = require('../../repository/put')
 const putUsers=async(req,res)=>{
@@ -11,7 +11,7 @@ const putUsers=async(req,res)=>{
     console.log(modelNames)
     await filterPutUser[modelNames](req,res,filter)
     console.log('geldi')
-    const updateData= await  putModelUser[modelNames](req,res);
+    const updateData= await  putUser[modelNames](req,res);
     console.log(updateData)
     const result = await updateMany(modelNames,filter,updateData)
     console.log('result')
